@@ -32,27 +32,8 @@
           animation-delay: 1.2s;
         }
         @keyframes fadeIn {
-          to {
-            opacity: 1;
-            transform: translateY(0);
-          }
-        }
-
-        .scale-hover:hover {
-          transform: scale(1.05);
-        }
-
-        .scale-hover:active {
-          transform: scale(0.95);
-        }
-
-        @media (max-width: 768px) {
-            .mobile-menu-hidden {
-                display: none;
-            }
-        }
-        .dropdown-menu-hidden {
-            display: none;
+            from { opacity: 0; }
+            to { opacity: 1; }
         }
       </style>
 </head>
@@ -66,155 +47,7 @@
         <div class="absolute inset-0 bg-black bg-opacity-50 z-5 backdrop-blur-[2px]"></div>
 
         <!-- Navigation -->
-        <nav class="bg-yellow-300 inset-1 z-10 relative w-fit mx-auto rounded-[30px] mt-3">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="flex items-center justify-between h-16">
-                    <div class="flex items-center mx-auto">
-                        <div class="flex-shrink-0">
-                            <a href="#" class="text-black font-bold">
-                                <img src="/public/tsc-logo.png" alt="Logo" class="h-12 w-auto">
-                            </a>
-                        </div>
-                        <div class="hidden md:block">
-                            <div class="ml-10 flex items-baseline space-x-4">
-                                <a href="#" class="text-black hover:bg-yellow-400 px-3 py-2 rounded-md text-sm font-medium">START</a>
-                                <a href="#" class="text-black hover:bg-yellow-400 px-3 py-2 rounded-md text-sm font-medium">SHOP</a>
-
-                                <!-- BFV -->
-                                <div class="relative dropdown">
-                                    <button class="text-black hover:bg-yellow-400 px-3 py-2 rounded-md text-sm font-medium flex items-center dropdown-toggle" aria-expanded="false" aria-controls="bfv-menu">
-                                        BFV
-                                        <svg class="ml-1 h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                                            <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
-                                        </svg>
-                                    </button>
-                                    <div id="bfv-menu" class="absolute left-0 mt-2 w-48 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 dropdown-menu-hidden">
-                                        <div class="py-1" role="menu" aria-orientation="vertical">
-                                            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" role="menuitem">BFV Option 1</a>
-                                            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" role="menuitem">BFV Option 2</a>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <!-- Verein -->
-                                <div class="relative dropdown">
-                                    <button class="text-black hover:bg-yellow-400 px-3 py-2 rounded-md text-sm font-medium flex items-center dropdown-toggle" aria-expanded="false" aria-controls="verein-menu">
-                                        VEREIN
-                                        <svg class="ml-1 h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                                            <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
-                                        </svg>
-                                    </button>
-                                    <div id="verein-menu" class="absolute left-0 mt-2 w-48 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 dropdown-menu-hidden">
-                                        <div class="py-1" role="menu" aria-orientation="vertical">
-                                            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" role="menuitem">VEREIN Option 1</a>
-                                            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" role="menuitem">VEREIN Option 2</a>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <!-- Fussball -->
-                                <div class="relative dropdown">
-                                    <button class="text-black hover:bg-yellow-400 px-3 py-2 rounded-md text-sm font-medium flex items-center dropdown-toggle" aria-expanded="false" aria-controls="fussball-menu">
-                                        FUSSBALL
-                                        <svg class="ml-1 h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                                            <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
-                                        </svg>
-                                    </button>
-                                    <div id="fussball-menu" class="absolute left-0 mt-2 w-48 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 dropdown-menu-hidden">
-                                        <div class="py-1" role="menu" aria-orientation="vertical">
-                                            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-300" role="menuitem">FUSSBALL Option 1</a>
-                                            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-300" role="menuitem">FUSSBALL Option 2</a>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <!-- Angebote -->
-                                <div class="relative dropdown">
-                                    <button class="text-black hover:bg-yellow-400 px-3 py-2 rounded-md text-sm font-medium flex items-center dropdown-toggle" aria-expanded="false" aria-controls="angebot-menu">
-                                        ANGEBOTE
-                                        <svg class="ml-1 h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                                            <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
-                                        </svg>
-                                    </button>
-                                    <div id="angebot-menu" class="absolute left-0 mt-2 w-48 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 dropdown-menu-hidden">
-                                        <div class="py-1" role="menu" aria-orientation="vertical">
-                                            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" role="menuitem">BOGENSCHIESSEN</a>
-                                            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" role="menuitem">GYMNASTIK</a>
-                                            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" role="menuitem">THEATER</a>
-                                            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" role="menuitem">KINDERTURNEN</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="-mr-2 flex md:hidden">
-                        <button type="button" class="inline-flex items-center justify-center p-2 rounded-md text-black hover:text-white hover:bg-yellow-400 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-yellow-300 focus:ring-white" aria-controls="mobile-menu" aria-expanded="false" id="mobile-menu-button">
-                            <span class="sr-only">Open main menu</span>
-                            <svg class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-                            </svg>
-                            <svg class="hidden h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-                            </svg>
-                        </button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="md:hidden mobile-menu-hidden" id="mobile-menu">
-                <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-                    <a href="#" class="text-black hover:bg-yellow-400 block px-3 py-2 rounded-md text-base font-medium">START</a>
-                    <a href="#" class="text-black hover:bg-yellow-400 block px-3 py-2 rounded-md text-base font-medium">SHOP</a>
-                    <a href="#" class="text-black hover:bg-yellow-400 block px-3 py-2 rounded-md text-base font-medium">BFV</a>
-                    <a href="#" class="text-black hover:bg-yellow-400 block px-3 py-2 rounded-md text-base font-medium">VEREIN</a>
-                    <a href="#" class="text-black hover:bg-yellow-400 block px-3 py-2 rounded-md text-base font-medium">FUSSBALL</a>
-                    <a href="#" class="text-black hover:bg-yellow-400 block px-3 py-2 rounded-md text-base font-medium">BOGENSCHIESSEN</a>
-                    <a href="#" class="text-black hover:bg-yellow-400 block px-3 py-2 rounded-md text-base font-medium">GYMNASTIK</a>
-                    <a href="#" class="text-black hover:bg-yellow-400 block px-3 py-2 rounded-md text-base font-medium">THEATER</a>
-                    <a href="#" class="text-black hover:bg-yellow-400 block px-3 py-2 rounded-md text-base font-medium">KINDERTURNEN</a>
-                    <a href="#" class="text-black hover:bg-yellow-400 block px-3 py-2 rounded-md text-base font-medium">IMPRESSUM</a>
-                </div>
-            </div>
-        </nav>
-
-        <script>
-            // Mobile menu toggle
-            document.getElementById('mobile-menu-button').addEventListener('click', function() {
-                document.getElementById('mobile-menu').classList.toggle('mobile-menu-hidden');
-            });
-
-            // Dropdown menu toggle
-            document.querySelectorAll('.dropdown-toggle').forEach(function(button) {
-                button.addEventListener('click', function() {
-                    const menu = this.nextElementSibling;
-                    const isExpanded = this.getAttribute('aria-expanded') === 'true';
-
-                    // Close all other open dropdowns
-                    document.querySelectorAll('.dropdown-menu-hidden').forEach(function(dropdown) {
-                        if (dropdown !== menu) {
-                            dropdown.classList.add('dropdown-menu-hidden');
-                            dropdown.previousElementSibling.setAttribute('aria-expanded', 'false');
-                        }
-                    });
-
-                    // Toggle current dropdown
-                    menu.classList.toggle('dropdown-menu-hidden');
-                    this.setAttribute('aria-expanded', !isExpanded);
-                });
-            });
-
-            // Close dropdowns when clicking outside
-            document.addEventListener('click', function(event) {
-                if (!event.target.closest('.dropdown-toggle')) {
-                    document.querySelectorAll('.dropdown-menu-hidden').forEach(function(dropdown) {
-                        dropdown.classList.add('dropdown-menu-hidden');
-                        dropdown.previousElementSibling.setAttribute('aria-expanded', 'false');
-                    });
-                }
-            });
-        </script>
-
+        <div id="navbar-container"></div>
 
         <!-- Hero Content -->
         <div class="relative z-10 flex flex-col items-center justify-center h-[calc(100vh-80px)] text-center px-4">
@@ -237,21 +70,21 @@
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <div class="text-center fade-in fade-in-delay-1">
                     <div class="flex justify-center">
-                        <img src="/public/settings.svg" class="w-16 h-16 mb-4" alt="Settings Icon">
+                        <img src="/public/svg/settings.svg" class="w-16 h-16 mb-4" alt="Settings Icon">
                     </div>
                     <h3 class="text-2xl font-semibold mb-4">Vorstandschaft</h3>
                     <p class="text-gray-600">Die Vorstandschaft stellt sich kurz vor. Hier findet man Informationen zu Punkten wie Vereinsführung, wie sind wir organisiert, wer ist für was verantwortlich, wie erreiche ich jemanden und wie schauen die jeweiligen Verantwortlichen aus.</p>
                 </div>
                 <div class="text-center fade-in fade-in-delay-2">
                     <div class="flex justify-center">
-                        <img src="/public/user.svg" class="w-16 h-16 mb-4" alt="User Icon">
+                        <img src="/public/svg/user.svg" class="w-16 h-16 mb-4" alt="User Icon">
                     </div>
                     <h3 class="text-2xl font-semibold mb-4">Trainer / Betreuer</h3>
                     <p class="text-gray-600">Alle Trainer und Betreuer sind hier in diesem Bereich zu finden. Derzeit sind wir dabei alle Informationen zusammen zu tragen und diesen Bereich möglichst zeitnah fertig zu stellen.</p>
                 </div>
                 <div class="text-center fade-in fade-in-delay-3">
                     <div class="flex justify-center">
-                        <img src="/public/football.svg" class="w-16 h-16 mb-4" alt="Soccer Ball Icon">
+                        <img src="/public/svg/football.svg" class="w-16 h-16 mb-4" alt="Soccer Ball Icon">
                     </div>
                     <h3 class="text-2xl font-semibold mb-4">Chronik</h3>
                     <p class="text-gray-600">Wer ist der TSC. Viele unserer Mitglieder die schon lange dabei sind haben zusammengetragen, wie der TSC Weissenbronn von der Gründung bis heute gewachsen ist.</p>
@@ -268,7 +101,7 @@
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                 <div class="bg-white p-6 rounded-lg shadow-md text-center flex flex-col justify-between">
                     <div>
-                        <img src="/public/fußball.jpg" alt="Fußball" width="150" height="150" class="rounded-full mx-auto mb-4">
+                        <img src="/public/pictures/fußball.jpg" alt="Fußball" width="150" height="150" class="rounded-full mx-auto mb-4">
                         <h3 class="text-xl font-semibold mb-2">Fußball</h3>
                         <p class="text-gray-600">Erfahren Sie mehr über unsere Fußball-Abteilung und ihre Aktivitäten.</p>
                     </div>
@@ -276,7 +109,7 @@
                 </div>
                 <div class="bg-white p-6 rounded-lg shadow-md text-center flex flex-col justify-between">
                     <div>
-                        <img src="/public/gymnastik.jpg" alt="Gymnastik" width="150" height="150" class="rounded-full mx-auto mb-4">
+                        <img src="/public/pictures/gymnastik.jpg" alt="Gymnastik" width="150" height="150" class="rounded-full mx-auto mb-4">
                         <h3 class="text-xl font-semibold mb-2">Gymnastik</h3>
                         <p class="text-gray-600">Erfahren Sie mehr über unsere Gymnastik-Abteilung und ihre Aktivitäten.</p>
                     </div>
@@ -284,7 +117,7 @@
                 </div>
                 <div class="bg-white p-6 rounded-lg shadow-md text-center flex flex-col justify-between">
                     <div>
-                        <img src="/public/bogenschießen.png" alt="Bogenschießen" width="150" height="150" class="rounded-full mx-auto mb-4 h-[150px] w-[200px]">
+                        <img src="/public/pictures/bogenschießen.png" alt="Bogenschießen" width="150" height="150" class="rounded-full mx-auto mb-4 h-[150px] w-[200px]">
                         <h3 class="text-xl font-semibold mb-2">Bogenschießen</h3>
                         <p class="text-gray-600">Erfahren Sie mehr über unsere Bogenschießen-Abteilung und ihre Aktivitäten.</p>
                     </div>
@@ -292,7 +125,7 @@
                 </div>
                 <div class="bg-white p-6 rounded-lg shadow-md text-center flex flex-col justify-between">
                     <div>
-                        <img src="/public/theater.jpg" alt="Theater" width="150" height="150" class="rounded-full mx-auto mb-4">
+                        <img src="/public/pictures/theater.jpg" alt="Theater" width="150" height="150" class="rounded-full mx-auto mb-4">
                         <h3 class="text-xl font-semibold mb-2">Theater</h3>
                         <p class="text-gray-600">Erfahren Sie mehr über unsere Theater-Abteilung und ihre Aktivitäten.</p>
                     </div>
@@ -367,40 +200,23 @@
 </body>
 
 <!-- Footer -->
-<footer class="bg-gray-900 text-white py-8">
-    <div class="max-w-6xl mx-auto px-4">
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div>
-                <h3 class="text-xl font-semibold mb-4">Kontakt</h3>
-                <p class="flex items-center mb-2">
-                    <img src="/public/mail.svg" class="w-5 h-5 mr-2" alt="Mail Icon" />
-                    mail@tsc-weissenbronn.de
-                </p>
-                <a href="https://www.google.de/maps/place/91560+Heilsbronn-Wei%C3%9Fenbronn/@49.3249326,10.8159353,16z/data=!3m1!4b1!4m6!3m5!1s0x4798b2ec93c371e9:0x20f8faf09b23cd72!8m2!3d49.3253109!4d10.8167167!16s%2Fg%2F121pvz4_?entry=ttu&g_ep=EgoyMDI0MDkxOC4xIKXMDSoASAFQAw%3D%3D" class="flex items-center hover:text-yellow-300">
-                    <img src="/public/map-pin.svg" class="w-5 h-5 mr-2" alt="Map Pin Icon" />
-                    Verein finden
-                </>
-            </div>
-            <div>
-                <h3 class="text-xl font-semibold mb-4">Folgen Sie uns</h3>
-                <div class="flex space-x-4">
-                    <a href="#" class="transition-colors">
-                        <img class="invert" src="/public/facebook.svg" alt="Facebook" width="24" height="24" />
-                    </a>
-                    <a href="#" class="transition-colors">
-                        <img class="invert" src="/public/instagram.svg" alt="Instagram" width="24" height="24" />
-                    </a>
-                </div>
-            </div>
-            <div>
-                <h3 class="text-xl font-semibold mb-4">Schnelllinks</h3>
-                <ul class="space-y-2">
-                    <li><a href="#" class="hover:text-yellow-300 transition-colors">Impressum</a></li>
-                </ul>
-            </div>
-        </div>
-        <div class="mt-8 pt-8 border-t border-gray-700 text-center">
-            <p>&copy; 2018 TSC Weissenbronn. Alle Rechte vorbehalten.</p>
-        </div>
-    </div>
-</footer>
+<div id="footer-container"></div>
+
+</html>
+
+<!-- Scripts -->
+<script>
+    // Fetch Navbar.html and insert it into the page
+    fetch("/public/Navbar.html")
+      .then(response => response.text())
+      .then(html => {
+        document.getElementById("navbar-container").innerHTML = html;
+      });
+
+    // Fetch Footer.html and insert it into the page
+    fetch("/public/Footer.html")
+      .then(response => response.text())
+      .then(html => {
+        document.getElementById("footer-container").innerHTML = html;
+      });
+</script>

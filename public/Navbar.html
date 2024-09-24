@@ -1,0 +1,195 @@
+<style>
+    @keyframes fadeIn {
+        from { opacity: 0; }
+        to { opacity: 1; }
+    }
+    .dropdown-content {
+        display: none;
+    }
+    .dropdown:hover .dropdown-content {
+        display: block;
+        animation: fadeIn 0.3s ease-in-out;
+    }
+    .nested-dropdown-content {
+        display: none;
+        left: 100%;
+        top: 0;
+    }
+    .nested-dropdown:hover .nested-dropdown-content {
+        display: block;
+    }
+</style>
+<nav class="bg-yellow-300 shadow-lg rounded-[30px] relative w-fit z-20 mx-auto mt-4">
+    <div class="max-w-6xl mx-auto px-4">
+        <div class="flex justify-between">
+            <div class="flex space-x-7">
+                <div>
+                    <a href="#" class="flex items-center py-4 px-2">
+                        <img src="/public/pictures/tsc-logo.png" alt="Logo" class="h-12 w-auto">
+                    </a>
+                </div>
+                <div class="hidden md:flex items-center space-x-1">
+                    <a href="/" class="py-4 px-2 text-black font-semibold hover:bg-yellow-400  py-2 rounded-md transition duration-300">Start</a>
+                    <a href="https://team.jako.com/de-de/team/tsc_weissenbronn/" class="py-4 px-2 text-black font-semibold hover:bg-yellow-400  py-2 rounded-md transition duration-300">Shop</a>
+
+                    <!-- BFV -->
+                    <div class="dropdown">
+                        <a href="#"
+                            class="py-4 px-2 text-black font-semibold hover:bg-yellow-400  py-2 rounded-md transition duration-300 flex">
+                            BFV
+                            <img src="/public/svg/arrow-down.svg" alt="Arrow Down">
+                        </a>
+                        <div class="dropdown-content absolute bg-white shadow-md  py-2 w-48 rounded-md">
+                            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">1.
+                                Mannschaft</a>
+                            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">2.
+                                Mannschaft</a>
+                            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">E -
+                                Jugend</a>
+                        </div>
+                    </div>
+
+                    <!-- Verein -->
+                    <div class="dropdown">
+                        <a href="#"
+                            class="py-4 px-2 text-black font-semibold hover:bg-yellow-400 py-2 rounded-md transition duration-300 flex">
+                            Verein
+                            <img src="/public/svg/arrow-down.svg" alt="Arrow Down">
+                        </a>
+                        <div class="dropdown-content absolute bg-white shadow-md py-2 w-48 rounded-md">
+                            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Vorstand</a>
+                            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Chronik</a>
+                            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Trainer &
+                                Betreuer</a>
+                            <a href="#"
+                                class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Mitgliedsantrag</a>
+                        </div>
+                    </div>
+
+                    <!-- Fußball -->
+                    <div class="dropdown">
+                        <a href="#" class="py-4 px-2 text-black font-semibold hover:bg-yellow-400 flex rounded-md transition duration-300">
+                            Fußball
+                            <img src="/public/svg/arrow-down.svg" alt="Arrow Down">
+                        </a>
+                        <div class="dropdown-content absolute bg-white shadow-md py-2 w-48 rounded-md">
+                            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Herren</a>
+                            <div class="nested-dropdown relative">
+                                <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 w-full">
+                                    Jugend
+                                    <img class="float-right" src="/public/svg/arrow-down.svg" alt="Arrow Down">
+                                </a>
+                                <div
+                                    class="nested-dropdown-content absolute bg-white shadow-md py-2 w-48 rounded-md">
+                                    <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                                        B - Jugend
+                                    </a>
+                                    <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                                        C - Jugend
+                                    </a>
+                                    <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                                        D - Jugend
+                                    </a>
+                                </div>
+                            </div>
+                            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Damen</a>
+                            <a href="#"
+                                class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Alt-Herren</a>
+                        </div>
+                    </div>
+
+                    <!-- Angebote -->
+                    <div class="dropdown">
+                        <a href="#" class="py-4 px-2 text-black font-semibold hover:bg-yellow-400 flex py-2 rounded-md transition duration-300">
+                            Angebote
+                            <img src="/public/svg/arrow-down.svg" alt="Arrow Down">
+                        </a>
+                        <div class="dropdown-content absolute bg-white shadow-md py-2 w-48 rounded-md">
+                            <a href="#"
+                                class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Bogenschießen</a>
+                            <a href="#"
+                                class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Gymnastik</a>
+                            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Theater</a>
+                            <a href="#"
+                                class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Kinderturnen</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="md:hidden flex items-center">
+                <button class="outline-none mobile-menu-button">
+                    <svg class="w-6 h-6 text-black hover:bg-yellow-400  py-2 rounded-md" x-show="!showMenu"
+                        fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        viewBox="0 0 24 24" stroke="currentColor">
+                        <path d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </div>
+    <div class="hidden mobile-menu">
+        <ul class="">
+            <li><a href="#"
+                    class="block text-sm px-2 py-4 text-black hover:bg-green-500 hover:text-white transition duration-300">Start</a>
+            </li>
+            <li>
+                <a href="#"
+                    class="block text-sm px-2 py-4 text-black hover:bg-green-500 hover:text-white transition duration-300">Shop</a>
+                <ul class="bg-white px-4">
+                    <li><a href="#"
+                            class="block text-sm px-2 py-2 text-black hover:bg-green-500 hover:text-white transition duration-300">Category
+                            1</a></li>
+                    <li>
+                        <a href="#"
+                            class="block text-sm px-2 py-2 text-black hover:bg-green-500 hover:text-white transition duration-300">Category
+                            2</a>
+                        <ul class="bg-white px-4">
+                            <li><a href="#"
+                                    class="block text-sm px-2 py-2 text-black hover:bg-green-500 hover:text-white transition duration-300">Route
+                                    1</a></li>
+                            <li><a href="#"
+                                    class="block text-sm px-2 py-2 text-black hover:bg-green-500 hover:text-white transition duration-300">Route
+                                    2</a></li>
+                            <li><a href="#"
+                                    class="block text-sm px-2 py-2 text-black hover:bg-green-500 hover:text-white transition duration-300">Route
+                                    3</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#"
+                            class="block text-sm px-2 py-2 text-black hover:bg-green-500 hover:text-white transition duration-300">Category
+                            3</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#"
+                    class="block text-sm px-2 py-4 text-black hover:bg-green-500 hover:text-white transition duration-300">Services</a>
+                <ul class="bg-white px-4">
+                    <li><a href="#"
+                            class="block text-sm px-2 py-2 text-black hover:bg-green-500 hover:text-white transition duration-300">Service
+                            1</a></li>
+                    <li><a href="#"
+                            class="block text-sm px-2 py-2 text-black hover:bg-green-500 hover:text-white transition duration-300">Service
+                            2</a></li>
+                    <li><a href="#"
+                            class="block text-sm px-2 py-2 text-black hover:bg-green-500 hover:text-white transition duration-300">Service
+                            3</a></li>
+                </ul>
+            </li>
+            <li><a href="#"
+                    class="block text-sm px-2 py-4 text-black hover:bg-green-500 hover:text-white transition duration-300">About</a>
+            </li>
+            <li><a href="#"
+                    class="block text-sm px-2 py-4 text-black hover:bg-green-500 hover:text-white transition duration-300">Contact</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<script>
+    const btn = document.querySelector("button.mobile-menu-button");
+    const menu = document.querySelector(".mobile-menu");
+
+    btn.addEventListener("click", () => {
+        menu.classList.toggle("hidden");
+    });
+</script>

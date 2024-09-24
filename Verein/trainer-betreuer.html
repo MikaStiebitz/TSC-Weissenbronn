@@ -33,6 +33,10 @@
         }
     </style>
 </head>
+
+<!-- Navigation -->
+<div id="navbar-container"></div>
+
 <body class="bg-gray-100">
     <div class="container mx-auto px-4 py-8">
         <h1 class="text-4xl font-bold text-center mb-2">TRAINER UND BETREUER</h1>
@@ -72,7 +76,7 @@
                     </tr>
                     <tr>
                         <td class="px-6 py-4 whitespace-nowrap" data-label="Name">
-                            <div class="text-sm font-medium text-gray-900">Alexander "Atze" Stark</div>
+                            <div class="text-sm font-medium text-gray-900">Alexander "Atzze" Stark</div>
                         </td>
                         <td class="px-6 py-4 whitespace-nowrap" data-label="Abteilung">
                             <div class="text-sm text-gray-500">C-Jugend</div>
@@ -141,4 +145,102 @@
                             <div class="text-sm font-medium text-gray-900">Jörg Kohler</div>
                         </td>
                         <td class="px-6 py-4 whitespace-nowrap" data-label="Abteilung">
-                            <div class="
+                            <div class="text-sm text-gray-500">D-Jugend</div>
+                        </td>
+                        <td class="px-6 py-4 whitespace-nowrap" data-label="Kontakt">
+                            <div class="text-sm text-gray-500">Tel.: 0170 / 8615630</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="px-6 py-4 whitespace-nowrap" data-label="Name">
+                            <div class="text-sm font-medium text-gray-900">Silvio Sternkopf</div>
+                        </td>
+                        <td class="px-6 py-4 whitespace-nowrap" data-label="Abteilung">
+                            <div class="text-sm text-gray-500">F-Jugend</div>
+                        </td>
+                        <td class="px-6 py-4 whitespace-nowrap" data-label="Kontakt">
+                            <div class="text-sm text-gray-500">Tel.: 0160 / 97396015</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="px-6 py-4 whitespace-nowrap" data-label="Name">
+                            <div class="text-sm font-medium text-gray-900">Markus Maier</div>
+                        </td>
+                        <td class="px-6 py-4 whitespace-nowrap" data-label="Abteilung">
+                            <div class="text-sm text-gray-500">E-Jugend</div>
+                        </td>
+                        <td class="px-6 py-4 whitespace-nowrap" data-label="Kontakt">
+                            <div class="text-sm text-gray-500">Tel.: 0151 / 21228543 - Email: mama1.tscw@gmail.com</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="px-6 py-4 whitespace-nowrap" data-label="Name">
+                            <div class="text-sm font-medium text-gray-900">Florian Schreiber</div>
+                        </td>
+                        <td class="px-6 py-4 whitespace-nowrap" data-label="Abteilung">
+                            <div class="text-sm text-gray-500">G-Jugend</div>
+                        </td>
+                        <td class="px-6 py-4 whitespace-nowrap" data-label="Kontakt">
+                            <div class="text-sm text-gray-500">Tel.: 0176 / 5798355</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="px-6 py-4 whitespace-nowrap" data-label="Name">
+                            <div class="text-sm font-medium text-gray-900">Bernd Schneider</div>
+                        </td>
+                        <td class="px-6 py-4 whitespace-nowrap" data-label="Abteilung">
+                            <div class="text-sm text-gray-500">Bogenschießen</div>
+                        </td>
+                        <td class="px-6 py-4 whitespace-nowrap" data-label="Kontakt">
+                            <div class="text-sm text-gray-500">Tel.: 0175 / 6672067 - Email: besc.tscw@gmail.com</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="px-6 py-4 whitespace-nowrap" data-label="Name">
+                            <div class="text-sm font-medium text-gray-900">Martin Vogt</div>
+                        </td>
+                        <td class="px-6 py-4 whitespace-nowrap" data-label="Abteilung">
+                            <div class="text-sm text-gray-500">F-Jugend</div>
+                        </td>
+                        <td class="px-6 py-4 whitespace-nowrap" data-label="Kontakt">
+                            <div class="text-sm text-gray-500">Tel.: 0163 / 6801747</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="px-6 py-4 whitespace-nowrap" data-label="Name">
+                            <div class="text-sm font-medium text-gray-900">Jürgen Endress</div>
+                        </td>
+                        <td class="px-6 py-4 whitespace-nowrap" data-label="Abteilung">
+                            <div class="text-sm text-gray-500">Herren</div>
+                        </td>
+                        <td class="px-6 py-4 whitespace-nowrap" data-label="Kontakt">
+                            <div class="text-sm text-gray-500">Tel.: 0170 / 9308173</div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+
+<!-- Footer -->
+<div id="footer-container"></div>
+
+</html>
+
+<!-- Scripts -->
+<script>
+    // Fetch Navbar.html and insert it into the page
+    fetch("/public/Navbar.html")
+      .then(response => response.text())
+      .then(html => {
+        document.getElementById("navbar-container").innerHTML = html;
+      });
+
+    // Fetch Footer.html and insert it into the page
+    fetch("/public/Footer.html")
+      .then(response => response.text())
+      .then(html => {
+        document.getElementById("footer-container").innerHTML = html;
+      });
+</script>

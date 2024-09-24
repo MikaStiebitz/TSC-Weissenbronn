@@ -6,6 +6,10 @@
     <title>E-JUGEND BFV</title>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
+
+<!-- Navigation -->
+<div id="navbar-container"></div>
+
 <body class="bg-gray-100">
     <div class="container mx-auto px-4 py-8">
         <h1 class="text-3xl font-bold mb-6">E-JUGEND BFV</h1>
@@ -120,4 +124,25 @@
         </div>
     </div>
 </body>
+
+<!-- Footer -->
+<div id="footer-container"></div>
+
 </html>
+
+<!-- Scripts -->
+<script>
+    // Fetch Navbar.html and insert it into the page
+    fetch("/public/Navbar.html")
+      .then(response => response.text())
+      .then(html => {
+        document.getElementById("navbar-container").innerHTML = html;
+      });
+
+    // Fetch Footer.html and insert it into the page
+    fetch("/public/Footer.html")
+      .then(response => response.text())
+      .then(html => {
+        document.getElementById("footer-container").innerHTML = html;
+      });
+</script>
