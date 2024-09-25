@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="de">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Impressum</title>
+        <script src="https://cdn.tailwindcss.com"></script>
+    </head>
+
+    <!-- Navigation -->
+    <div id="navbar-container"></div>
+
+    <body class="bg-white font-sans">
+        <div class="container mx-auto px-4 py-8 max-w-2xl">
+            <h1 class="text-4xl font-bold mb-2">Impressum</h1>
+            <div class="h-1 w-16 bg-yellow-400 mb-8"></div>
+
+            <div class="space-y-6 text-center">
+                <section>
+                    <h2 class="font-semibold mb-2">Geschäftsführender Vorstand</h2>
+                    <p>Christian Siedelmann</p>
+                    <p>Andreas Grasser</p>
+                    <p>Martin Ott</p>
+                </section>
+
+                <section>
+                    <h2 class="font-semibold mb-2">Vereinsanschrift</h2>
+                    <p>TSC Weissenbronn e.V.</p>
+                    <p>C/O Andreas Grasser</p>
+                    <p>Müncherlbach 37, 91560 Heilsbronn</p>
+                </section>
+
+                <section>
+                    <p>Registergericht: Amtsgericht Ansbach</p>
+                    <p>Registernummer VR 180</p>
+                </section>
+
+                <hr class="my-6 border-t border-gray-300" />
+
+                <section>
+                    <h2 class="font-semibold mb-2">Verantwortlich für Gestaltung und Inhalt</h2>
+                    <p>Christian Siedelmann</p>
+                    <p>email: vorstandkultur@tsc-weissenbronn.de</p>
+                </section>
+
+                <section>
+                    <p>Marco Mettke</p>
+                    <p>Heilsbronnerstrasse 15</p>
+                    <p>91560 Heilsbronn</p>
+                    <p>email: admin@tsc-weissenbronn.de</p>
+                </section>
+
+                <section class="text-sm">
+                    <h2 class="font-semibold mb-2">Hinweise zur Datenverarbeitung:</h2>
+                    <p class="text-justify">
+                        Die im Mitgliedsantrag erhobenen Daten werden in einer Mitgliederdatenbank digital gespeichert.
+                        In der Mitgliederdatenbank werden zudem Tätigkeiten im Verein (Posten in der Vorstandschaft,
+                        Trainertätigkeit) gespeichert. Die Datenbank ist gegen unberechtigten Zugriff geschützt
+                        abgelegt. Bei Beendigung der Mitgliedschaft werden alle diese Daten wieder gelöscht. Im Verein
+                        haben nur diese Personen Zugriff auf die Daten, die Sie zur Ausübung ihres Postens laut Satzung
+                        benötigen. Die Daten Name, Vorname, Geschlecht und Geburtsdatum werden an den BLSV zum
+                        abschließen einer Unfall- und Haftpflichtversicherung weitergegeben und dort auch nur hierfür
+                        verwendet.
+                    </p>
+                </section>
+            </div>
+        </div>
+    </body>
+
+    <!-- Footer -->
+    <div id="footer-container"></div>
+</html>
+
+<!-- Scripts -->
+<script>
+    // Fetch Navbar.html and insert it into the page
+    fetch("/public/Navbar.html")
+        .then(response => response.text())
+        .then(html => {
+            document.getElementById("navbar-container").innerHTML = html;
+            const btn = document.getElementById("burgerButton");
+            const mobileMenu = document.getElementById("mobileMenu");
+
+            btn.addEventListener("click", () => {
+                mobileMenu.classList.toggle("hidden");
+            });
+        });
+
+    // Fetch Footer.html and insert it into the page
+    fetch("/public/Footer.html")
+        .then(response => response.text())
+        .then(html => {
+            document.getElementById("footer-container").innerHTML = html;
+        });
+</script>
