@@ -1,222 +1,310 @@
 <!DOCTYPE html>
 <html lang="de">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Football Club Website</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
-    <style>
-        /* Animationen */
-        .fade-in {
-          opacity: 0;
-          transform: translateY(20px);
-          animation: fadeIn 0.5s forwards;
-        }
-        .fade-in-delay-1 {
-          animation-delay: 0.2s;
-        }
-        .fade-in-delay-2 {
-          animation-delay: 0.4s;
-        }
-        .fade-in-delay-3 {
-          animation-delay: 0.6s;
-        }
-        .fade-in-delay-4 {
-          animation-delay: 0.8s;
-        }
-        .fade-in-delay-5 {
-          animation-delay: 1s;
-        }
-        .fade-in-delay-6 {
-          animation-delay: 1.2s;
-        }
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-      </style>
-</head>
-<body class="bg-gray-100 min-h-screen">
-    <!-- Hero Section -->
-    <div class="relative min-h-screen bg-gray-900 text-white overflow-hidden">
-        <!-- Background Image -->
-        <div class="absolute inset-0 bg-cover bg-center z-0" style="background-image: url('https://www.tsc-weissenbronn.de/wp-content/uploads/2021/01/cropped-sportheim6-1.jpg?height=1080&width=1920'); filter: brightness(50%);"></div>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Football Club Website</title>
+        <link rel="icon" href="/public/pictures/tsc-logo.png" type="image/png" />
+        <script src="https://cdn.tailwindcss.com"></script>
+        <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+        <style>
+            /* Animationen */
+            .fade-in {
+                opacity: 0;
+                transform: translateY(20px);
+                animation: fadeIn 0.5s forwards;
+            }
+            .fade-in-delay-1 {
+                animation-delay: 0.2s;
+            }
+            .fade-in-delay-2 {
+                animation-delay: 0.4s;
+            }
+            .fade-in-delay-3 {
+                animation-delay: 0.6s;
+            }
+            .fade-in-delay-4 {
+                animation-delay: 0.8s;
+            }
+            .fade-in-delay-5 {
+                animation-delay: 1s;
+            }
+            .fade-in-delay-6 {
+                animation-delay: 1.2s;
+            }
+            @keyframes fadeIn {
+                from {
+                    opacity: 0;
+                }
+                to {
+                    opacity: 1;
+                }
+            }
+        </style>
+    </head>
+    <body class="bg-gray-100 min-h-screen">
+        <!-- Hero Section -->
+        <div class="relative min-h-screen bg-gray-900 text-white overflow-hidden">
+            <!-- Background Image -->
+            <div
+                class="absolute inset-0 bg-cover bg-center z-0"
+                style="
+                    background-image: url('https://www.tsc-weissenbronn.de/wp-content/uploads/2021/01/cropped-sportheim6-1.jpg?height=1080&width=1920');
+                    filter: brightness(50%);
+                "></div>
 
-        <!-- Glass Blur Overlay -->
-        <div class="absolute inset-0 bg-black bg-opacity-50 z-5 backdrop-blur-[2px]"></div>
+            <!-- Glass Blur Overlay -->
+            <div class="absolute inset-0 bg-black bg-opacity-50 z-5 backdrop-blur-[2px]"></div>
 
-        <!-- Navigation -->
-        <div id="navbar-container"></div>
+            <!-- Navigation -->
+            <div id="navbar-container"></div>
 
-        <!-- Hero Content -->
-        <div class="relative z-10 flex flex-col items-center justify-center h-[calc(100vh-80px)] text-center px-4">
-            <h1 class="text-5xl md:text-7xl font-bold mb-4 fade-in fade-in-delay-1" style="--i: 0.2s;">TSC Weissenbronn</h1>
-            <h2 class="text-3xl md:text-5xl font-semibold mb-8 text-yellow-300 fade-in fade-in-delay-2" style="--i: 0.4s;">Fußballverein</h2>
-            <p class="max-w-2xl text-lg mb-8 fade-in fade-in-delay-3" style="--i: 0.6s;"> Der TSC Weißenbronn hat seine Wurzeln im TV Weißenbronn, dem Turnverein, der am 5. November 1930 gegründet wurde. Seitdem hat sich der Verein stetig weiterentwickelt und ist heute ein wichtiger Bestandteil der lokalen Gemeinschaft.</p>
-            <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 fade-in fade-in-delay-4">
-                <button class="bg-yellow-300 text-gray-900 px-8 py-3 rounded-full font-semibold flex items-center justify-center hover:bg-yellow-400 transition-colors animate-fade-in-up hover:scale-105 active:scale-95 transition-transform" style="--i: 0.8s;">MEHR ERFAHREN <span class="ml-2">&gt;</span></button>
-            </div>
-        </div>
-    </div>
-
-    <!-- Unser Verein Section -->
-    <section class="py-16 px-4">
-        <div class="max-w-6xl mx-auto">
-            <h2 class="text-4xl font-bold text-center mb-2">Unser Verein</h2>
-            <div class="w-24 h-1 bg-yellow-300 mx-auto mb-8"></div>
-            <p class="text-center text-xl mb-16">Wie stellen uns vor!</p>
-
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="text-center fade-in fade-in-delay-1">
-                    <div class="flex justify-center">
-                        <img src="/public/svg/settings.svg" class="w-16 h-16 mb-4" alt="Settings Icon">
-                    </div>
-                    <h3 class="text-2xl font-semibold mb-4">Vorstandschaft</h3>
-                    <p class="text-gray-600">Die Vorstandschaft stellt sich kurz vor. Hier findet man Informationen zu Punkten wie Vereinsführung, wie sind wir organisiert, wer ist für was verantwortlich, wie erreiche ich jemanden und wie schauen die jeweiligen Verantwortlichen aus.</p>
-                </div>
-                <div class="text-center fade-in fade-in-delay-2">
-                    <div class="flex justify-center">
-                        <img src="/public/svg/user.svg" class="w-16 h-16 mb-4" alt="User Icon">
-                    </div>
-                    <h3 class="text-2xl font-semibold mb-4">Trainer / Betreuer</h3>
-                    <p class="text-gray-600">Alle Trainer und Betreuer sind hier in diesem Bereich zu finden. Derzeit sind wir dabei alle Informationen zusammen zu tragen und diesen Bereich möglichst zeitnah fertig zu stellen.</p>
-                </div>
-                <div class="text-center fade-in fade-in-delay-3">
-                    <div class="flex justify-center">
-                        <img src="/public/svg/football.svg" class="w-16 h-16 mb-4" alt="Soccer Ball Icon">
-                    </div>
-                    <h3 class="text-2xl font-semibold mb-4">Chronik</h3>
-                    <p class="text-gray-600">Wer ist der TSC. Viele unserer Mitglieder die schon lange dabei sind haben zusammengetragen, wie der TSC Weissenbronn von der Gründung bis heute gewachsen ist.</p>
+            <!-- Hero Content -->
+            <div class="relative z-10 flex flex-col items-center justify-center h-[calc(100vh-80px)] text-center px-4">
+                <h1 class="text-5xl md:text-7xl font-bold mb-4 fade-in fade-in-delay-1" style="--i: 0.2s">
+                    TSC Weissenbronn
+                </h1>
+                <h2
+                    class="text-3xl md:text-5xl font-semibold mb-8 text-yellow-300 fade-in fade-in-delay-2"
+                    style="--i: 0.4s">
+                    Fußballverein
+                </h2>
+                <p class="max-w-2xl text-lg mb-8 fade-in fade-in-delay-3" style="--i: 0.6s">
+                    Der TSC Weißenbronn hat seine Wurzeln im TV Weißenbronn, dem Turnverein, der am 5. November 1930
+                    gegründet wurde. Seitdem hat sich der Verein stetig weiterentwickelt und ist heute ein wichtiger
+                    Bestandteil der lokalen Gemeinschaft.
+                </p>
+                <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 fade-in fade-in-delay-4">
+                    <button
+                        class="bg-yellow-300 text-gray-900 px-8 py-3 rounded-full font-semibold flex items-center justify-center hover:bg-yellow-400 transition-colors animate-fade-in-up hover:scale-105 active:scale-95 transition-transform"
+                        style="--i: 0.8s">
+                        MEHR ERFAHREN
+                        <span class="ml-2">&gt;</span>
+                    </button>
                 </div>
             </div>
         </div>
-    </section>
 
-    <!-- Unsere Abteilungen Section -->
-    <section class="py-16 px-4 bg-gray-200">
-        <div class="max-w-6xl mx-auto">
-            <h2 class="text-4xl font-bold text-center mb-2">Unsere Abteilungen</h2>
-            <div class="w-24 h-1 bg-yellow-300 mx-auto mb-8"></div>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                <div class="bg-white p-6 rounded-lg shadow-md text-center flex flex-col justify-between">
-                    <div>
-                        <img src="/public/pictures/fußball.jpg" alt="Fußball" width="150" height="150" class="rounded-full mx-auto mb-4">
-                        <h3 class="text-xl font-semibold mb-2">Fußball</h3>
-                        <p class="text-gray-600">Erfahren Sie mehr über unsere Fußball-Abteilung und ihre Aktivitäten.</p>
+        <!-- Unser Verein Section -->
+        <section class="py-16 px-4">
+            <div class="max-w-6xl mx-auto">
+                <h2 class="text-4xl font-bold text-center mb-2">Unser Verein</h2>
+                <div class="w-24 h-1 bg-yellow-300 mx-auto mb-8"></div>
+                <p class="text-center text-xl mb-16">Wie stellen uns vor!</p>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="text-center fade-in fade-in-delay-1">
+                        <div class="flex justify-center">
+                            <img src="/public/svg/settings.svg" class="w-16 h-16 mb-4" alt="Settings Icon" />
+                        </div>
+                        <h3 class="text-2xl font-semibold mb-4">Vorstandschaft</h3>
+                        <p class="text-gray-600">
+                            Die Vorstandschaft stellt sich kurz vor. Hier findet man Informationen zu Punkten wie
+                            Vereinsführung, wie sind wir organisiert, wer ist für was verantwortlich, wie erreiche ich
+                            jemanden und wie schauen die jeweiligen Verantwortlichen aus.
+                        </p>
                     </div>
-                    <button class="mt-4 bg-yellow-300 text-gray-900 px-4 py-2 rounded-full font-semibold hover:bg-yellow-400 transition-colors">Mehr Infos</button>
-                </div>
-                <div class="bg-white p-6 rounded-lg shadow-md text-center flex flex-col justify-between">
-                    <div>
-                        <img src="/public/pictures/gymnastik.jpg" alt="Gymnastik" width="150" height="150" class="rounded-full mx-auto mb-4">
-                        <h3 class="text-xl font-semibold mb-2">Gymnastik</h3>
-                        <p class="text-gray-600">Erfahren Sie mehr über unsere Gymnastik-Abteilung und ihre Aktivitäten.</p>
+                    <div class="text-center fade-in fade-in-delay-2">
+                        <div class="flex justify-center">
+                            <img src="/public/svg/user.svg" class="w-16 h-16 mb-4" alt="User Icon" />
+                        </div>
+                        <h3 class="text-2xl font-semibold mb-4">Trainer / Betreuer</h3>
+                        <p class="text-gray-600">
+                            Alle Trainer und Betreuer sind hier in diesem Bereich zu finden. Derzeit sind wir dabei alle
+                            Informationen zusammen zu tragen und diesen Bereich möglichst zeitnah fertig zu stellen.
+                        </p>
                     </div>
-                    <button class="mt-4 bg-yellow-300 text-gray-900 px-4 py-2 rounded-full font-semibold hover:bg-yellow-400 transition-colors">Mehr Infos</button>
-                </div>
-                <div class="bg-white p-6 rounded-lg shadow-md text-center flex flex-col justify-between">
-                    <div>
-                        <img src="/public/pictures/bogenschießen.png" alt="Bogenschießen" width="150" height="150" class="rounded-full mx-auto mb-4 h-[150px] w-[200px]">
-                        <h3 class="text-xl font-semibold mb-2">Bogenschießen</h3>
-                        <p class="text-gray-600">Erfahren Sie mehr über unsere Bogenschießen-Abteilung und ihre Aktivitäten.</p>
+                    <div class="text-center fade-in fade-in-delay-3">
+                        <div class="flex justify-center">
+                            <img src="/public/svg/football.svg" class="w-16 h-16 mb-4" alt="Soccer Ball Icon" />
+                        </div>
+                        <h3 class="text-2xl font-semibold mb-4">Chronik</h3>
+                        <p class="text-gray-600">
+                            Wer ist der TSC. Viele unserer Mitglieder die schon lange dabei sind haben zusammengetragen,
+                            wie der TSC Weissenbronn von der Gründung bis heute gewachsen ist.
+                        </p>
                     </div>
-                    <button class="mt-4 bg-yellow-300 text-gray-900 px-4 py-2 rounded-full font-semibold hover:bg-yellow-400 transition-colors">Mehr Infos</button>
-                </div>
-                <div class="bg-white p-6 rounded-lg shadow-md text-center flex flex-col justify-between">
-                    <div>
-                        <img src="/public/pictures/theater.jpg" alt="Theater" width="150" height="150" class="rounded-full mx-auto mb-4">
-                        <h3 class="text-xl font-semibold mb-2">Theater</h3>
-                        <p class="text-gray-600">Erfahren Sie mehr über unsere Theater-Abteilung und ihre Aktivitäten.</p>
-                    </div>
-                    <button class="mt-4 bg-yellow-300 text-gray-900 px-4 py-2 rounded-full font-semibold hover:bg-yellow-400 transition-colors">Mehr Infos</button>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Anstehende Spiele Section -->
-    <section class="py-16 px-4">
-        <div class="max-w-6xl mx-auto">
-            <h2 class="text-4xl font-bold text-center mb-2">Anstehende Spiele</h2>
-            <div class="w-24 h-1 bg-yellow-300 mx-auto mb-8"></div>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div class="bg-white p-6 rounded-lg shadow-md">
-                    <p class="text-lg font-semibold mb-2">15. Mai</p>
-                    <p class="text-gray-600 mb-2">TSC Weissenbronn vs FC Nürnberg</p>
-                    <p class="text-yellow-600 font-semibold">15:00 Uhr</p>
-                </div>
-                <div class="bg-white p-6 rounded-lg shadow-md">
-                    <p class="text-lg font-semibold mb-2">22. Mai</p>
-                    <p class="text-gray-600 mb-2">SV München vs TSC Weissenbronn</p>
-                    <p class="text-yellow-600 font-semibold">16:30 Uhr</p>
-                </div>
-                <div class="bg-white p-6 rounded-lg shadow-md">
-                    <p class="text-lg font-semibold mb-2">29. Mai</p>
-                    <p class="text-gray-600 mb-2">TSC Weissenbronn vs Stuttgarter Kickers</p>
-                    <p class="text-yellow-600 font-semibold">14:00 Uhr</p>
+        <!-- Unsere Abteilungen Section -->
+        <section class="py-16 px-4 bg-gray-200">
+            <div class="max-w-6xl mx-auto">
+                <h2 class="text-4xl font-bold text-center mb-2">Unsere Abteilungen</h2>
+                <div class="w-24 h-1 bg-yellow-300 mx-auto mb-8"></div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <div class="bg-white p-6 rounded-lg shadow-md text-center flex flex-col justify-between">
+                        <div>
+                            <img
+                                src="/public/pictures/fußball.jpg"
+                                alt="Fußball"
+                                width="150"
+                                height="150"
+                                class="rounded-full mx-auto mb-4" />
+                            <h3 class="text-xl font-semibold mb-2">Fußball</h3>
+                            <p class="text-gray-600">
+                                Erfahren Sie mehr über unsere Fußball-Abteilung und ihre Aktivitäten.
+                            </p>
+                        </div>
+                        <button
+                            class="mt-4 bg-yellow-300 text-gray-900 px-4 py-2 rounded-full font-semibold hover:bg-yellow-400 transition-colors">
+                            Mehr Infos
+                        </button>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-md text-center flex flex-col justify-between">
+                        <div>
+                            <img
+                                src="/public/pictures/gymnastik.jpg"
+                                alt="Gymnastik"
+                                width="150"
+                                height="150"
+                                class="rounded-full mx-auto mb-4" />
+                            <h3 class="text-xl font-semibold mb-2">Gymnastik</h3>
+                            <p class="text-gray-600">
+                                Erfahren Sie mehr über unsere Gymnastik-Abteilung und ihre Aktivitäten.
+                            </p>
+                        </div>
+                        <button
+                            class="mt-4 bg-yellow-300 text-gray-900 px-4 py-2 rounded-full font-semibold hover:bg-yellow-400 transition-colors">
+                            Mehr Infos
+                        </button>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-md text-center flex flex-col justify-between">
+                        <div>
+                            <img
+                                src="/public/pictures/bogenschießen.png"
+                                alt="Bogenschießen"
+                                width="150"
+                                height="150"
+                                class="rounded-full mx-auto mb-4 h-[150px] w-[200px]" />
+                            <h3 class="text-xl font-semibold mb-2">Bogenschießen</h3>
+                            <p class="text-gray-600">
+                                Erfahren Sie mehr über unsere Bogenschießen-Abteilung und ihre Aktivitäten.
+                            </p>
+                        </div>
+                        <button
+                            class="mt-4 bg-yellow-300 text-gray-900 px-4 py-2 rounded-full font-semibold hover:bg-yellow-400 transition-colors">
+                            Mehr Infos
+                        </button>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-md text-center flex flex-col justify-between">
+                        <div>
+                            <img
+                                src="/public/pictures/theater.jpg"
+                                alt="Theater"
+                                width="150"
+                                height="150"
+                                class="rounded-full mx-auto mb-4" />
+                            <h3 class="text-xl font-semibold mb-2">Theater</h3>
+                            <p class="text-gray-600">
+                                Erfahren Sie mehr über unsere Theater-Abteilung und ihre Aktivitäten.
+                            </p>
+                        </div>
+                        <button
+                            class="mt-4 bg-yellow-300 text-gray-900 px-4 py-2 rounded-full font-semibold hover:bg-yellow-400 transition-colors">
+                            Mehr Infos
+                        </button>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Veranstaltungskalender Section -->
-    <section class="py-16 px-4 bg-gray-200">
-        <div class="max-w-6xl mx-auto">
-            <h2 class="text-4xl font-bold text-center mb-2">Veranstaltungskalender</h2>
-            <div class="w-24 h-1 bg-yellow-300 mx-auto mb-8"></div>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div class="bg-white p-6 rounded-lg shadow-md">
-                    <div class="flex items-center mb-4">
-                        <p class="text-lg font-semibold">10. Juni</p>
+        <!-- Anstehende Spiele Section -->
+        <section class="py-16 px-4">
+            <div class="max-w-6xl mx-auto">
+                <h2 class="text-4xl font-bold text-center mb-2">Anstehende Spiele</h2>
+                <div class="w-24 h-1 bg-yellow-300 mx-auto mb-8"></div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="bg-white p-6 rounded-lg shadow-md">
+                        <p class="text-lg font-semibold mb-2">15. Mai</p>
+                        <p class="text-gray-600 mb-2">TSC Weissenbronn vs FC Nürnberg</p>
+                        <p class="text-yellow-600 font-semibold">15:00 Uhr</p>
                     </div>
-                    <h3 class="text-xl font-semibold mb-2">Sommerfest</h3>
-                    <p class="text-gray-600">Unser jährliches Sommerfest mit Grillen und Spielen für die ganze Familie.</p>
-                </div>
-                <div class="bg-white p-6 rounded-lg shadow-md">
-                    <div class="flex items-center mb-4">
-                        <p class="text-lg font-semibold">24. Juli</p>
+                    <div class="bg-white p-6 rounded-lg shadow-md">
+                        <p class="text-lg font-semibold mb-2">22. Mai</p>
+                        <p class="text-gray-600 mb-2">SV München vs TSC Weissenbronn</p>
+                        <p class="text-yellow-600 font-semibold">16:30 Uhr</p>
                     </div>
-                    <h3 class="text-xl font-semibold mb-2">Jugendturnier</h3>
-                    <p class="text-gray-600">Fußballturnier für unsere Jugendmannschaften mit Gästen aus der Region.</p>
-                </div>
-                <div class="bg-white p-6 rounded-lg shadow-md">
-                    <div class="flex items-center mb-4">
-                        <p class="text-lg font-semibold">15. August</p>
+                    <div class="bg-white p-6 rounded-lg shadow-md">
+                        <p class="text-lg font-semibold mb-2">29. Mai</p>
+                        <p class="text-gray-600 mb-2">TSC Weissenbronn vs Stuttgarter Kickers</p>
+                        <p class="text-yellow-600 font-semibold">14:00 Uhr</p>
                     </div>
-                    <h3 class="text-xl font-semibold mb-2">Tag der offenen Tür</h3>
-                    <p class="text-gray-600">Lernen Sie unseren Verein kennen und probieren Sie verschiedene Sportarten aus.</p>
-                </div>
-                <div class="bg-white p-6 rounded-lg shadow-md">
-                    <div class="flex items-center mb-4">
-                        <p class="text-lg font-semibold">3. September</p>
-                    </div>
-                    <h3 class="text-xl font-semibold mb-2">Benefizlauf</h3>
-                    <p class="text-gray-600">Laufen Sie für den guten Zweck und unterstützen Sie lokale Wohltätigkeitsorganisationen.</p>
                 </div>
             </div>
-        </div>
-    </section>
-</body>
+        </section>
 
-<!-- Footer -->
-<div id="footer-container"></div>
+        <!-- Veranstaltungskalender Section -->
+        <section class="py-16 px-4 bg-gray-200">
+            <div class="max-w-6xl mx-auto">
+                <h2 class="text-4xl font-bold text-center mb-2">Veranstaltungskalender</h2>
+                <div class="w-24 h-1 bg-yellow-300 mx-auto mb-8"></div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="bg-white p-6 rounded-lg shadow-md">
+                        <div class="flex items-center mb-4">
+                            <p class="text-lg font-semibold">10. Juni</p>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">Sommerfest</h3>
+                        <p class="text-gray-600">
+                            Unser jährliches Sommerfest mit Grillen und Spielen für die ganze Familie.
+                        </p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-md">
+                        <div class="flex items-center mb-4">
+                            <p class="text-lg font-semibold">24. Juli</p>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">Jugendturnier</h3>
+                        <p class="text-gray-600">
+                            Fußballturnier für unsere Jugendmannschaften mit Gästen aus der Region.
+                        </p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-md">
+                        <div class="flex items-center mb-4">
+                            <p class="text-lg font-semibold">15. August</p>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">Tag der offenen Tür</h3>
+                        <p class="text-gray-600">
+                            Lernen Sie unseren Verein kennen und probieren Sie verschiedene Sportarten aus.
+                        </p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-md">
+                        <div class="flex items-center mb-4">
+                            <p class="text-lg font-semibold">3. September</p>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">Benefizlauf</h3>
+                        <p class="text-gray-600">
+                            Laufen Sie für den guten Zweck und unterstützen Sie lokale Wohltätigkeitsorganisationen.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </body>
 
+    <!-- Footer -->
+    <div id="footer-container"></div>
 </html>
 
 <!-- Scripts -->
 <script>
     // Fetch Navbar.html and insert it into the page
     fetch("/public/Navbar.html")
-      .then(response => response.text())
-      .then(html => {
-        document.getElementById("navbar-container").innerHTML = html;
-      });
+        .then(response => response.text())
+        .then(html => {
+            document.getElementById("navbar-container").innerHTML = html;
+            const btn = document.getElementById("burgerButton");
+            const mobileMenu = document.getElementById("mobileMenu");
+
+            btn.addEventListener("click", () => {
+                mobileMenu.classList.toggle("hidden");
+            });
+        });
 
     // Fetch Footer.html and insert it into the page
     fetch("/public/Footer.html")
-      .then(response => response.text())
-      .then(html => {
-        document.getElementById("footer-container").innerHTML = html;
-      });
+        .then(response => response.text())
+        .then(html => {
+            document.getElementById("footer-container").innerHTML = html;
+        });
 </script>

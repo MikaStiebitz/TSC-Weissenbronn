@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="de">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Mitgliedsantrag - TSC Weißenbronn</title>
+        <script src="https://cdn.tailwindcss.com"></script>
+    </head>
+
+    <!-- Navigation -->
+    <div id="navbar-container"></div>
+
+    <body class="bg-gray-100 text-gray-900">
+        <div class="container mx-auto px-4 py-8">
+            <h1 class="text-4xl font-bold mb-8 text-center">
+                <span class="border-b-4 border-yellow-300 pb-2">MITGLIEDSANTRAG</span>
+            </h1>
+
+            <div class="bg-white shadow-lg rounded-lg p-6 mb-8">
+                <h2 class="text-2xl font-semibold mb-4">Um Mitglied zu werden</h2>
+                <p class="mb-4">Bitte Mitgliedsantrag ausdrucken:</p>
+                <a
+                    href="https://www.tsc-weissenbronn.de/wp-content/uploads/2023/05/TSC-Mitgliedsantrag-2023.pdf"
+                    class="inline-block bg-yellow-300 text-gray-900 font-bold py-2 px-4 rounded hover:bg-yellow-400 transition duration-300">
+                    Mitgliedsantrag herunterladen
+                </a>
+
+                <div class="mt-6">
+                    <p class="mb-2">
+                        und über die Jugendbetreuer oder Spielleiter an den Schriftführer weiterleiten oder per Post an:
+                    </p>
+                    <address class="not-italic">
+                        <strong>TSC Weißenbronn</strong>
+                        <br />
+                        Schriftführer
+                        <br />
+                        Robert Schneider
+                        <br />
+                        Nelkenstr. 5a
+                        <br />
+                        91560 Heilsbronn
+                    </address>
+                </div>
+            </div>
+
+            <div class="bg-white shadow-lg rounded-lg p-6 mb-8">
+                <h2 class="text-2xl font-semibold mb-4">Beendigung der Mitgliedschaft</h2>
+                <p class="mb-4">Die Mitgliedschaft kann immer zum 31.12. des laufenden Jahres gekündigt werden.</p>
+                <p class="mb-4">Kündigungen bitte immer schriftlich mit Unterschrift an folgende Adresse:</p>
+                <address class="not-italic">
+                    <strong>TSC Weißenbronn</strong>
+                    <br />
+                    Vorstand Finanzen
+                    <br />
+                    Martin Ott
+                    <br />
+                    Friedrich-Bergold-Weg 8
+                    <br />
+                    90429 Nürnberg
+                </address>
+                <p class="mt-4 font-bold">
+                    Bitte beachten: mit dem Beenden der Vereinsmitgliedschaft verliert auch ein vorhandener Spielerpass
+                    seine Gültigkeit!
+                </p>
+            </div>
+
+            <div class="bg-white shadow-lg rounded-lg p-6">
+                <h2 class="text-2xl font-semibold mb-4">Hinweise zur Datenverarbeitung</h2>
+                <p class="mb-4">
+                    Die im Mitgliedsantrag erhobenen Daten werden in einer Mitgliederdatenbank digital gespeichert. In
+                    der Mitgliederdatenbank werden zudem Tätigkeiten im Verein (Posten in der Vorstandschaft,
+                    Trainertätigkeit) gespeichert. Die Datenbank ist gegen unberechtigten Zugriff geschützt abgelegt.
+                    Bei Beendigung der Mitgliedschaft werden alle diese Daten wieder gelöscht.
+                </p>
+                <p class="mb-4">
+                    Im Verein haben nur diese Personen Zugriff auf die Daten, die Sie zur Ausübung ihres Postens laut
+                    Satzung benötigen. Die Daten Name, Vorname, Geschlecht und Geburtsdatum werden an den BLSV zum
+                    abschließen einer Unfall- und Haftpflichtversicherung weitergegeben und dort auch nur hierfür
+                    verwendet.
+                </p>
+            </div>
+        </div>
+    </body>
+
+    <!-- Footer -->
+    <div id="footer-container"></div>
+</html>
+
+<!-- Scripts -->
+<script>
+    // Fetch Navbar.html and insert it into the page
+    fetch("/public/Navbar.html")
+        .then(response => response.text())
+        .then(html => {
+            document.getElementById("navbar-container").innerHTML = html;
+            const btn = document.getElementById("burgerButton");
+            const mobileMenu = document.getElementById("mobileMenu");
+
+            btn.addEventListener("click", () => {
+                mobileMenu.classList.toggle("hidden");
+            });
+        });
+
+    // Fetch Footer.html and insert it into the page
+    fetch("/public/Footer.html")
+        .then(response => response.text())
+        .then(html => {
+            document.getElementById("footer-container").innerHTML = html;
+        });
+</script>

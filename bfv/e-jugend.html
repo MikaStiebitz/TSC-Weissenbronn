@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="de">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>E-JUGEND BFV</title>
+        <script src="https://cdn.tailwindcss.com"></script>
+    </head>
+
+    <!-- Navigation -->
+    <div id="navbar-container"></div>
+
+    <body class="bg-gray-100 h-[65vh]">
+        <div class="container mx-auto px-4 py-8 h-full">
+            <h1 class="text-3xl font-bold mb-6">E-JUGEND BFV</h1>
+            <div class="h-1 w-16 bg-yellow-400 mb-8"></div>
+
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Left Column: Match Results -->
+                <div class="bg-white shadow-md rounded-lg overflow-hidden">
+                    <div class="bg-gray-800 text-white p-4 flex justify-between items-center">
+                        <div class="flex items-center">
+                            <img src="/public/tsc-logo.png" alt="TSC Weissenbronn Logo" class="w-auto h-10 mr-3" />
+                            <div>
+                                <h2 class="font-bold">TSC Weissenbronn</h2>
+                                <p class="text-sm">E-Junioren</p>
+                            </div>
+                        </div>
+                        <button class="bg-yellow-400 text-black p-2 rounded">
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                class="h-5 w-5"
+                                viewBox="0 0 20 20"
+                                fill="currentColor">
+                                <path
+                                    fill-rule="evenodd"
+                                    d="M4 2a1 1 0 011 1v2.101a7.002 7.002 0 0111.601 2.566 1 1 0 11-1.885.666A5.002 5.002 0 005.999 7H9a1 1 0 010 2H4a1 1 0 01-1-1V3a1 1 0 011-1zm.008 9.057a1 1 0 011.276.61A5.002 5.002 0 0014.001 13H11a1 1 0 110-2h5a1 1 0 011 1v5a1 1 0 11-2 0v-2.101a7.002 7.002 0 01-11.601-2.566 1 1 0 01.61-1.276z"
+                                    clip-rule="evenodd" />
+                            </svg>
+                        </button>
+                    </div>
+                    <nav class="flex border-b">
+                        <button class="flex-1 py-2 px-4 text-center border-b-2 border-yellow-400 font-semibold">
+                            Spiele
+                        </button>
+                        <button class="flex-1 py-2 px-4 text-center text-gray-600">Ergebnisse</button>
+                        <button class="flex-1 py-2 px-4 text-center text-gray-600">Tabellen</button>
+                        <button class="flex-1 py-2 px-4 text-center text-gray-600">Spieler</button>
+                    </nav>
+                    <div class="p-4">
+                        <p class="text-sm text-gray-600 mb-2">U11 (E1-Jun.) KG 06 N/F Regio</p>
+                        <div class="space-y-4">
+                            <div class="border-b pb-2">
+                                <div class="flex justify-between items-center mb-2">
+                                    <span class="text-sm text-gray-600">Sa. 10. Okt. 20</span>
+                                    <span class="text-sm text-gray-600">11:15</span>
+                                </div>
+                                <div class="flex justify-between items-center">
+                                    <div class="flex items-center">
+                                        <img
+                                            src="/public/tsc-logo.png"
+                                            alt="TSV Lichtenau Logo"
+                                            class="w-auto h-6 mr-2" />
+                                        <span>TSV Lichtenau</span>
+                                    </div>
+                                    <span class="font-bold">7:1</span>
+                                    <div class="flex items-center">
+                                        <span>TSC Weissenbronn</span>
+                                        <img
+                                            src="/public/tsc-logo.png"
+                                            alt="TSC Weissenbronn Logo"
+                                            class="w-auto h-6 ml-2" />
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- More match results would go here, following the same structure -->
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Column: League Table -->
+                <div class="bg-white shadow-md rounded-lg overflow-hidden">
+                    <div class="bg-gray-800 text-white p-4 flex justify-between items-center">
+                        <div class="flex items-center">
+                            <img src="/public/tsc-logo.png" alt="TSC Weissenbronn Logo" class="w-auto h-10 mr-3" />
+                            <div>
+                                <h2 class="font-bold">TSC Weissenbronn</h2>
+                                <p class="text-sm">E-Junioren</p>
+                            </div>
+                        </div>
+                        <button class="bg-yellow-400 text-black p-2 rounded">
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                class="h-5 w-5"
+                                viewBox="0 0 20 20"
+                                fill="currentColor">
+                                <path
+                                    fill-rule="evenodd"
+                                    d="M4 2a1 1 0 011 1v2.101a7.002 7.002 0 0111.601 2.566 1 1 0 11-1.885.666A5.002 5.002 0 005.999 7H9a1 1 0 010 2H4a1 1 0 01-1-1V3a1 1 0 011-1zm.008 9.057a1 1 0 011.276.61A5.002 5.002 0 0014.001 13H11a1 1 0 110-2h5a1 1 0 011 1v5a1 1 0 11-2 0v-2.101a7.002 7.002 0 01-11.601-2.566 1 1 0 01.61-1.276z"
+                                    clip-rule="evenodd" />
+                            </svg>
+                        </button>
+                    </div>
+                    <nav class="flex border-b">
+                        <button class="flex-1 py-2 px-4 text-center border-b-2 border-yellow-400 font-semibold">
+                            Spiele
+                        </button>
+                        <button class="flex-1 py-2 px-4 text-center text-gray-600">Ergebnisse</button>
+                        <button class="flex-1 py-2 px-4 text-center text-gray-600">Tabellen</button>
+                        <button class="flex-1 py-2 px-4 text-center text-gray-600">Spieler</button>
+                    </nav>
+                    <div class="p-4">
+                        <div class="overflow-x-auto">
+                            <table class="w-full text-sm">
+                                <thead>
+                                    <tr class="bg-gray-100">
+                                        <th class="py-2 px-3 text-left">#</th>
+                                        <th class="py-2 px-3 text-left">Verein</th>
+                                        <th class="py-2 px-3 text-right">Sp</th>
+                                        <th class="py-2 px-3 text-right">Tore</th>
+                                        <th class="py-2 px-3 text-right">Diff.</th>
+                                        <th class="py-2 px-3 text-right">Pkt</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="border-b">
+                                        <td class="py-2 px-3">1</td>
+                                        <td class="py-2 px-3">TSC Neuendettelsau</td>
+                                        <td class="py-2 px-3 text-right">5</td>
+                                        <td class="py-2 px-3 text-right">47:9</td>
+                                        <td class="py-2 px-3 text-right">38</td>
+                                        <td class="py-2 px-3 text-right">13</td>
+                                    </tr>
+                                    <!-- More table rows would go here -->
+                                    <tr class="border-b bg-red-100">
+                                        <td class="py-2 px-3">7</td>
+                                        <td class="py-2 px-3 font-bold">TSC Weissenbronn</td>
+                                        <td class="py-2 px-3 text-right">5</td>
+                                        <td class="py-2 px-3 text-right">7:48</td>
+                                        <td class="py-2 px-3 text-right">-41</td>
+                                        <td class="py-2 px-3 text-right">0</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+
+    <!-- Footer -->
+    <div id="footer-container"></div>
+</html>
+
+<!-- Scripts -->
+<script>
+    // Fetch Navbar.html and insert it into the page
+    fetch("/public/Navbar.html")
+        .then(response => response.text())
+        .then(html => {
+            document.getElementById("navbar-container").innerHTML = html;
+            const btn = document.getElementById("burgerButton");
+            const mobileMenu = document.getElementById("mobileMenu");
+
+            btn.addEventListener("click", () => {
+                mobileMenu.classList.toggle("hidden");
+            });
+        });
+
+    // Fetch Footer.html and insert it into the page
+    fetch("/public/Footer.html")
+        .then(response => response.text())
+        .then(html => {
+            document.getElementById("footer-container").innerHTML = html;
+        });
+</script>
