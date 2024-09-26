@@ -6,7 +6,6 @@
         <title>Football Club Website</title>
         <link rel="icon" href="/public/pictures/tsc-logo.png" type="image/png" />
         <script src="https://cdn.tailwindcss.com"></script>
-        <script src="https://kit.fontawesome.com/a076d05399.js"></script>
         <style>
             /* Animationen */
             .fade-in {
@@ -29,15 +28,10 @@
             .fade-in-delay-5 {
                 animation-delay: 1s;
             }
-            .fade-in-delay-6 {
-                animation-delay: 1.2s;
-            }
             @keyframes fadeIn {
-                from {
-                    opacity: 0;
-                }
                 to {
                     opacity: 1;
+                    transform: translateY(0);
                 }
             }
         </style>
@@ -75,12 +69,13 @@
                     Bestandteil der lokalen Gemeinschaft.
                 </p>
                 <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 fade-in fade-in-delay-4">
-                    <button
+                    <a
+                        href="/fußball/herren.html"
                         class="bg-yellow-300 text-gray-900 px-8 py-3 rounded-full font-semibold flex items-center justify-center hover:bg-yellow-400 transition-colors animate-fade-in-up hover:scale-105 active:scale-95 transition-transform"
                         style="--i: 0.8s">
                         MEHR ERFAHREN
                         <span class="ml-2">&gt;</span>
-                    </button>
+                    </a>
                 </div>
             </div>
         </div>
@@ -147,10 +142,11 @@
                                 Erfahren Sie mehr über unsere Fußball-Abteilung und ihre Aktivitäten.
                             </p>
                         </div>
-                        <button
+                        <a
+                            href="/fußball/herren.html"
                             class="mt-4 bg-yellow-300 text-gray-900 px-4 py-2 rounded-full font-semibold hover:bg-yellow-400 transition-colors">
                             Mehr Infos
-                        </button>
+                        </a>
                     </div>
                     <div class="bg-white p-6 rounded-lg shadow-md text-center flex flex-col justify-between">
                         <div>
@@ -165,10 +161,11 @@
                                 Erfahren Sie mehr über unsere Gymnastik-Abteilung und ihre Aktivitäten.
                             </p>
                         </div>
-                        <button
+                        <a
+                            href="/angebote/gymnastik.html"
                             class="mt-4 bg-yellow-300 text-gray-900 px-4 py-2 rounded-full font-semibold hover:bg-yellow-400 transition-colors">
                             Mehr Infos
-                        </button>
+                        </a>
                     </div>
                     <div class="bg-white p-6 rounded-lg shadow-md text-center flex flex-col justify-between">
                         <div>
@@ -183,10 +180,11 @@
                                 Erfahren Sie mehr über unsere Bogenschießen-Abteilung und ihre Aktivitäten.
                             </p>
                         </div>
-                        <button
+                        <a
+                            href="/angebote/bogenschießen.html"
                             class="mt-4 bg-yellow-300 text-gray-900 px-4 py-2 rounded-full font-semibold hover:bg-yellow-400 transition-colors">
                             Mehr Infos
-                        </button>
+                        </a>
                     </div>
                     <div class="bg-white p-6 rounded-lg shadow-md text-center flex flex-col justify-between">
                         <div>
@@ -201,10 +199,11 @@
                                 Erfahren Sie mehr über unsere Theater-Abteilung und ihre Aktivitäten.
                             </p>
                         </div>
-                        <button
+                        <a
+                            href="/angebote/theater.html"
                             class="mt-4 bg-yellow-300 text-gray-900 px-4 py-2 rounded-full font-semibold hover:bg-yellow-400 transition-colors">
                             Mehr Infos
-                        </button>
+                        </a>
                     </div>
                 </div>
             </div>

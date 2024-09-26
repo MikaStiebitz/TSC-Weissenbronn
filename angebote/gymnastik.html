@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="de">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Gymnastik</title>
+        <link rel="icon" href="/public/pictures/tsc-logo.png" type="image/png" />
+        <script src="https://cdn.tailwindcss.com"></script>
+    </head>
+
+    <!-- Navigation -->
+    <div id="navbar-container"></div>
+
+    <body class="bg-white">
+        <main class="container mx-auto px-4 py-8">
+            <div class="bg-yellow-300 p-6 mb-8 rounded-lg">
+                <h2 class="text-2xl font-bold text-center mb-2">Übungsleiterin: Angela Ammon</h2>
+                <p class="text-center">Jeden Montag von 19:30Uhr bis 20:30Uhr</p>
+                <p class="text-center">Doppelturnhalle der Realschule Heilsbronn, Schönbühlstraße.</p>
+            </div>
+
+            <!-- Text -->
+            <div class="space-y-6 mx-auto mb-6">
+                <h1 class="font-bold text-xl mb-2">Damen - Gymnastik - Gruppe</h1>
+                <div class="space-y-3">
+                    <p>
+                        Die Damengymnastikgruppe des TSC Weißenbronn, mit der Übungsleiterin Angela Ammon, trifft sich
+                        jeden Montag von 19:30 Uhr bis 20:30 Uhr in der Doppelturnhalle der Realschule Heilsbronn,
+                        Schönbühlstraße.
+                    </p>
+                    <p>
+                        Die abwechslungsreiche Übungsstunde beinhaltet neben Stretching, Aerobic, Rücken- bzw .
+                        Beckenbodengymnastik auch Entspannungsübungen, sodass jede Altersgruppe angesprochen wird.
+                    </p>
+                    <p>
+                        Die Walkinggruppe des TSC Weißenbronn ist während der Sommerzeit von Mitte April bis Mitte
+                        September aktiv. Der Treffpunkt jeden Donnerstag um 19.00 Uhr ist am Löschteich in Weißenbronn.
+                        Die Gruppe läuft eine Stunde eine Strecke von ca. 6,5 km.
+                    </p>
+                    <p>
+                        Neben den regelmäßigen Gruppenstunden werden auch kurzfristig andere Aktivitäten
+                        unternommen:Wandern, Bowling etc. Auch die gesellige Seite kommt nicht zu kurz:
+                    </p>
+                    <p>Besuch von Kulturveranstaltungen, Grillfeste etc.</p>
+                    <p>Wer Interesse hat: einfach vorbeikommen, es ist jede „Sportbegeisterte“ herzlich willkommen!</p>
+                </div>
+            </div>
+
+            <div class="bg-gray-100 p-6 rounded-lg">
+                <h3 class="text-xl font-semibold mb-4">Ansprechpartner</h3>
+                <p>Heidi Schuh</p>
+                <p>Tel.: 0172 65 25 196</p>
+            </div>
+        </main>
+    </body>
+
+    <!-- Footer -->
+    <div id="footer-container"></div>
+</html>
+
+<!-- Scripts -->
+<script>
+    // Fetch Navbar.html and insert it into the page
+    fetch("/public/Navbar.html")
+        .then(response => response.text())
+        .then(html => {
+            document.getElementById("navbar-container").innerHTML = html;
+            const btn = document.getElementById("burgerButton");
+            const mobileMenu = document.getElementById("mobileMenu");
+
+            btn.addEventListener("click", () => {
+                mobileMenu.classList.toggle("hidden");
+            });
+        });
+
+    // Fetch Footer.html and insert it into the page
+    fetch("/public/Footer.html")
+        .then(response => response.text())
+        .then(html => {
+            document.getElementById("footer-container").innerHTML = html;
+        });
+</script>

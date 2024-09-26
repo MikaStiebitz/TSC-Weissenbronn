@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="de">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Kinderturnen</title>
+        <link rel="icon" href="/public/pictures/tsc-logo.png" type="image/png" />
+        <script src="https://cdn.tailwindcss.com"></script>
+    </head>
+
+    <!-- Navigation -->
+    <div id="navbar-container"></div>
+
+    <body class="bg-white font-sans">
+        <div class="container mx-auto px-4 py-16">
+            <h1 class="text-4xl font-bold mb-2">Kinderturnen</h1>
+            <div class="h-1 w-16 bg-yellow-400 mb-8"></div>
+
+            <div class="space-y-6 text-center">
+                <section>
+                    <h2 class="font-semibold mb-2">Tiger-Sport-Club</h2>
+                    <p>Turnen macht Spaß und hält uns fit.</p>
+                </section>
+
+                <section>
+                    <p>Die Bewegungsfreude der Kinder wollen wir vom TSC-Weißenbronn nutzen und fördern.</p>
+                </section>
+
+                <section>
+                    <p>Turnen, Tanzen und Spielen mit allem, was die Turnhalle hergibt</p>
+                    <p>(hüpfen, klettern, tanzen, Bewegungsbaustellen, schwingen, springen, balancieren).</p>
+                </section>
+
+                <section>
+                    <p>Die Kinder lernen dabei verschiedene Turngeräte und Materialien kennen</p>
+                    <p>(Seile, Reifen, Bälle, Tücher, Matten, Ringe. Barren, Kästen, Balken).</p>
+                </section>
+
+                <section>
+                    <p>
+                        Alle Kinder sind herzlich willkommen, die 2-4 Jahre alt sind. Das Turnen findet mit Eltern
+                        statt.
+                    </p>
+                </section>
+
+                <section>
+                    <p>Kommt vorbei und genießt es, eine Stunde SPORT mit Euren Kindern zu erleben.</p>
+                </section>
+
+                <section>
+                    <p>Jeden Mittwoch in der Hohenzollernhalle</p>
+                    <p>16 - 17 Uhr</p>
+                </section>
+            </div>
+        </div>
+    </body>
+
+    <!-- Footer -->
+    <div id="footer-container"></div>
+</html>
+
+<!-- Scripts -->
+<script>
+    // Fetch Navbar.html and insert it into the page
+    fetch("/public/Navbar.html")
+        .then(response => response.text())
+        .then(html => {
+            document.getElementById("navbar-container").innerHTML = html;
+            const btn = document.getElementById("burgerButton");
+            const mobileMenu = document.getElementById("mobileMenu");
+
+            btn.addEventListener("click", () => {
+                mobileMenu.classList.toggle("hidden");
+            });
+        });
+
+    // Fetch Footer.html and insert it into the page
+    fetch("/public/Footer.html")
+        .then(response => response.text())
+        .then(html => {
+            document.getElementById("footer-container").innerHTML = html;
+        });
+</script>
